@@ -28,7 +28,7 @@ jobs:
       - name: Run notifier script
         env:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
-          CHANNEL_ID: ${{ secrets.CHANNEL_ID }}
+          CHANNEL_IDS: ${{ secrets.CHANNEL_IDS }}  # 这里加个S
           EMAIL_ADDRESS: ${{ secrets.EMAIL_ADDRESS }}
           EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
         run: python notify.py
